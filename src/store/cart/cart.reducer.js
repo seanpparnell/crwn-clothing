@@ -3,8 +3,6 @@ import { CART_ACTION_TYPES } from "./cart.types";
 export const CART_INTITIAL_STATE = {
   isCartOpen: false,
   cartItems: [],
-  cartCount: 0,
-  cartTotal: 0,
 };
 
 export const cartReducer = (state = CART_INTITIAL_STATE, action = {}) => {
@@ -14,7 +12,7 @@ export const cartReducer = (state = CART_INTITIAL_STATE, action = {}) => {
     case CART_ACTION_TYPES.SET_CART_ITEMS:
       return {
         ...state,
-        ...payload
+        cartItems: payload,
       };
     case CART_ACTION_TYPES.SET_IS_CART_OPEN:
       return {

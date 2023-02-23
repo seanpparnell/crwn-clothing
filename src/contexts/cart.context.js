@@ -36,6 +36,9 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
   );
 };
 
+const clearCartItem = (cartItems, cartItemToClear) =>
+  cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
+
 const CART_ACTION_TYPES = {
   SET_IS_CART_OPEN: "SET_IS_CART_OPEN",
   SET_CART_ITEMS: "SET_CART_ITEMS",
@@ -68,8 +71,7 @@ const cartReducer = (state, action) => {
       throw new Error(`Undhandled type ${type} in cartReducer`);
   }
 };
-const clearCartItem = (cartItems, cartItemToClear) =>
-  cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
+
 
 
 
