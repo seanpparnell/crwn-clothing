@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "./store/store";
 import { PersistGate } from 'redux-persist/integration/react';
 import App from "./App";
+import { UserProvider } from "./contexts/user.context";
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.scss";
@@ -15,7 +16,9 @@ root.render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
-          <App />
+          <UserProvider>
+            <App />
+          </UserProvider>
         </BrowserRouter>
       </PersistGate>
     </Provider>

@@ -25,7 +25,7 @@ const SignInForm = () => {
     await signInWithGooglePopup();
   }
 
-  const handleSubtmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
@@ -58,7 +58,7 @@ const SignInForm = () => {
     <div className="sign-up-container">
       <h2>Already have an account?</h2>
       <span>Sign up with your email and password</span>
-      <form onSubmit={handleSubtmit}>
+      <form onSubmit={handleSubmit}>
         <FormInput
           label='Email'
           type='email' 
