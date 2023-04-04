@@ -15,15 +15,6 @@ const App = () => {
   useEffect(() => {
     dispatch(checkUserSession());
   }, []);
-
-  // if(!user) {
-  //   return (
-  //     <Routes>
-  //     <Route path='/' element={<Navigation />}>
-  //     </Route>
-  //   </Routes>
-  //   )
-  // }
   
 
 
