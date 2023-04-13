@@ -1,9 +1,9 @@
 import { CategoryItem } from '../catergories/category.types';
 import { CART_ACTION_TYPES, CartItem } from "./cart.types";
 import { createAction, withMatcher, Action, ActionWithPayload } from '../../utils/reducer/reducer.utils';
-import CartItem from '../../components/cart-item/cart-item.component';
 
-const addCartItem = (cartItems: Categroy[] , productToAdd: CategoryItem): CartItem[] => {
+
+const addCartItem = (cartItems: CartItem[] , productToAdd: CategoryItem): CartItem[] => {
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === productToAdd.id
   );
