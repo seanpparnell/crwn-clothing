@@ -9,4 +9,5 @@ export enum CART_ACTION_TYPES {
 
 export type CartItem = CategoryItem & {
   quantity: number;
+  // price: number;
 }
